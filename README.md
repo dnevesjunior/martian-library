@@ -13,3 +13,9 @@ Steps:
 - Setup database
 
 - Setup GraphQL
+
+Troubleshoot:
+
+- Sprockets::Rails::Helper::AssetNotPrecompiled in GraphiQL::Rails::Editors#show
+
+  - Cause is graphiql css and js not being precompile. Add lines from commit on app/assets/config/manifest.js
