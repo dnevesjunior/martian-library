@@ -16,6 +16,8 @@ Steps:
 
 - First GraphQL Type generation and docs
 
+- First GraphQL Type generation with relationship
+
 Notes:
 
 - GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
@@ -30,3 +32,6 @@ Troubleshoot:
 - Sprockets::Rails::Helper::AssetNotPrecompiled in GraphiQL::Rails::Editors#show
 
   - Cause is graphiql css and js not being precompile. Add lines from commit on app/assets/config/manifest.js
+
+- "Field 'full_name' doesn't exist on type 'User'"
+  - `def full_name` must be added as `field :full_name, String, null: false` on type definition (class UserType) - reading is camelCase on query

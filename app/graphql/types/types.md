@@ -6,3 +6,4 @@ Notes:
 - The array notation for the result type declares what it must be, for instance: `[Types::ItemType]` means that the field value must be an array and each element of this array must be represented using the `Types::ItemType` type
   - It can be generated with `rails g graphql:object item`
 - You may use UUID as a primary key in your table if you are worried about exposing sequential IDs
+- `object` references the type instance (e.g. [object.first_name, object.last_name].compact.join(" ") on UserType's full_name)
