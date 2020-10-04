@@ -9,3 +9,6 @@ Steps:
 - Prepare the data model
 
 - Seed pre-generated data
+
+- Setup database
+
