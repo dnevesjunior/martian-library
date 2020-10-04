@@ -1,8 +1,8 @@
-Martian Library from: https://evilmartians.com/chronicles/graphql-on-rails-1-from-zero-to-the-first-query
+# Martian Library from: https://evilmartians.com/chronicles/graphql-on-rails-1-from-zero-to-the-first-query
 
-Notes will stay here
+## Notes will stay here
 
-Steps:
+### Steps:
 
 - Remove unnecessary generators
 
@@ -18,16 +18,24 @@ Steps:
 
 - First GraphQL Type generation with relationship
 
-Notes:
+- Setup Apollo
 
-- GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
+### Notes:
+
+> GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
   - #execute parameters
     - `query` and `variables` represent a query string and arguments sent by a client respectively;
     - `context` is an arbitrary hash, which will be available during the query execution everywhere;
     - `operation_name` picks a named operation from the incoming request to execute (could be empty)
 
+    - This is connected to the backend through the http link configured on app/javascript/utils/apollo.js
 
-Troubleshoot:
+### Tips:
+
+- If you’re using Google Chrome, mind installing the Apollo extension. (Apollo Client Developer Tools on Firefox Browser Add-Ons)
+
+
+### Troubleshoot:
 
 - Sprockets::Rails::Helper::AssetNotPrecompiled in GraphiQL::Rails::Editors#show
 

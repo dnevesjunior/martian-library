@@ -47,3 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "graphql", "~> 1.11"
 
 gem 'graphiql-rails', group: :development
+
+# Remove warnings from thor gem while it isn't fixed by mantainers. Read more: https://github.com/erikhuda/thor/issues/538
+# gem 'thor', '0.19.1' doesn't work
