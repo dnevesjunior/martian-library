@@ -7,3 +7,5 @@ Steps:
 - Remove unnecessary generators
 
 - Prepare the data model
+
+- Seed pre-generated data
