@@ -12,3 +12,4 @@ Steps:
 
 - Setup database
 
+- Setup GraphQL
