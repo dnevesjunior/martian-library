@@ -4,6 +4,10 @@
 
 ### Steps:
 
+- Create database `rake db:create db:migrate db:seed`
+
+- Run package instalations `bundle install && yarn install`
+
 - Remove unnecessary generators
 
 - Prepare the data model
@@ -25,6 +29,9 @@
 - Show Provider on Library component
 
 - Write initial specs
+
+- Introduce mutations
+  - Authenticate the user via their email address
 
 ### Notes:
 
