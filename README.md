@@ -47,7 +47,11 @@
 
 - Sprockets::Rails::Helper::AssetNotPrecompiled in GraphiQL::Rails::Editors#show
 
-  - Cause is graphiql css and js not being precompile. Add lines from commit on app/assets/config/manifest.js
+  - Cause is graphiql css and js not being precompiled. Add lines to app/assets/config/manifest.js
+  ```javascript
+    //= link graphiql/rails/application.css
+    //= link graphiql/rails/application.js
+  ```
 
 - "Field 'full_name' doesn't exist on type 'User'"
   - `def full_name` must be added as `field :full_name, String, null: false` on type definition (class UserType) - reading is camelCase on query
