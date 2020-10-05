@@ -1,4 +1,4 @@
-Notes:
+# Notes:
 
 > mutations are responsible for changing (or mutating) data
 
@@ -21,3 +21,10 @@ Notes:
   3. the return type definition;
   4. the #resolve method.
   5. Add a new entry to MutationType.
+
+### Dealing with cache
+
+- There are two options to do it:
+
+  1. re-fetch the me query (we can use refetchQueries property on the Mutation component) when the mutation is completed—this can be useful, but we can do it better
+  2. Wait for the mutation to be completed and update the cache manually. apollo-cache-inmemory provides writeQuery function for that. The Mutation component from the react-apollo library has a special property called update. It accepts cache as the first argument and the mutation result as the second. We want to manually add a new cache entry using a writeQuery method. It’s like saying “Hey, Apollo! Here is some data, pretend that you received it from the server.”
