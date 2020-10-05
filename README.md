@@ -40,6 +40,8 @@
 
 - If you’re using Google Chrome, mind installing the Apollo extension. (Apollo Client Developer Tools on Firefox Browser Add-Ons)
 
+- The N+1 problem is not very efficient using `.preload()`, two better approaches seem to be: [lazy eager loading](https://github.com/DmitryTsepelev/ar_lazy_preload) and [batch loading](https://github.com/Shopify/graphql-batch)
+
 
 ### Troubleshoot:
 

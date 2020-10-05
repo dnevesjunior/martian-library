@@ -1,7 +1,3 @@
-=begin
-  
-=end
-
 module Types
   class QueryType < Types::BaseObject
     # Add root-level fields here.
@@ -13,7 +9,8 @@ module Types
             description: "Returns a list of itens in the martian library"
 
     def items
-      Item.all
+      # Preload helps with the N+1 problem
+      Item.preload(:user)
     end
   end
 end
