@@ -24,6 +24,8 @@
 
 - Show Provider on Library component
 
+- Write initial specs
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
@@ -47,3 +49,6 @@
 
 - "Field 'full_name' doesn't exist on type 'User'"
   - `def full_name` must be added as `field :full_name, String, null: false` on type definition (class UserType) - reading is camelCase on query
+
+- Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered
+  - Probable issue in ruby 2.7 with bundler gemspec. Run `gem update --system 3.0.8 && gem update --system`. Ref: https://github.com/rubygems/rubygems/issues/3551
