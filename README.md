@@ -22,6 +22,8 @@
 
 - Setup Apollo Provider - [provider pattern](https://reactjs.org/docs/context.html#contextprovider)
 
+- Show Provider on Library component
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
