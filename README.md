@@ -37,6 +37,7 @@
 
 - Library mutations
   - Add Item
+  - Update Item
 
 ### Notes:
 
