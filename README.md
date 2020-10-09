@@ -35,6 +35,9 @@
   - Create frontend resource to handle authentication
   - Add tokens to Apollo client
 
+- Library mutations
+  - Add Item
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
