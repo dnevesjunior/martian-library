@@ -36,7 +36,7 @@ const UserInfo = () => {
                           if (token) {
                             localStorage.setItem('mlToken', token);
                           }
-                        });
+                        }).catch(error => console.log('error', error));
                       }}>
                         <input ref={input} type='email' className={cs.input} placeholder='Your Email' />
                         <input type='submit' className={cs.button} value='Sign In' />

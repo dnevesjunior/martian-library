@@ -33,6 +33,7 @@
 - Introduce mutations
   - Authenticate the user via their email address
   - Create frontend resource to handle authentication
+  - Add tokens to Apollo client
 
 ### Notes:
 
