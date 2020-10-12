@@ -30,6 +30,20 @@ const UpdateItemForm = ({
                   title,
                   description,
                   imageUrl
+                },
+                // add optimistic update to update items before server response
+                optimisticResponse: {
+                  __typename: 'Mutation',
+                  updateItem: {
+                    __typename: 'UpdateItemMutationPayload',
+                    item: {
+                      id,
+                      __typename: 'Item',
+                      title,
+                      description,
+                      imageUrl
+                    }
+                  }
                 }
               });
               onClose();

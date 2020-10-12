@@ -45,6 +45,8 @@
   - Update cache on list after Update
   - Update Item Form
 
+- Add Optimistic Update
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
