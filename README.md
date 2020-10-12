@@ -4,6 +4,10 @@
 
 ### Steps:
 
+- Create database `rake db:create db:migrate db:seed`
+
+- Run package instalations `bundle install && yarn install`
+
 - Remove unnecessary generators
 
 - Prepare the data model
@@ -26,6 +30,23 @@
 
 - Write initial specs
 
+- Introduce mutations
+  - Authenticate the user via their email address
+  - Create frontend resource to handle authentication
+  - Add tokens to Apollo client
+
+- Library mutations
+  - Add Item
+  - Update Item
+
+- Mutation Views
+  - Update Item
+  - Add Item
+  - Update cache on list after Update
+  - Update Item Form
+
+- Add Optimistic Update
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
@@ -36,12 +57,15 @@
 
     - This is connected to the backend through the http link configured on app/javascript/utils/apollo.js
 
+- queries are defined in operations.graphql
+
 ### Tips:
 
 - If you’re using Google Chrome, mind installing the Apollo extension. (Apollo Client Developer Tools on Firefox Browser Add-Ons)
 
 - The N+1 problem is not very efficient using `.preload()`, two better approaches seem to be: [lazy eager loading](https://github.com/DmitryTsepelev/ar_lazy_preload) and [batch loading](https://github.com/Shopify/graphql-batch)
 
+- [CSS Modules](https://github.com/css-modules/css-modules) help avoid styles clashes
 
 ### Troubleshoot:
 

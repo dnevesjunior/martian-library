@@ -12,5 +12,13 @@ module Types
       # Preload helps with the N+1 problem
       Item.preload(:user)
     end
+
+    field   :me,
+            Types::UserType,
+            null: true
+
+    def me
+      context[:current_user]
+    end
   end
 end
