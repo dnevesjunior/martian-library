@@ -47,6 +47,9 @@
 
 - Add Optimistic Update
 
+- Refactoring
+  - DRY on queries
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
