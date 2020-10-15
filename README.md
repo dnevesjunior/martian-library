@@ -52,6 +52,7 @@
   - Fragments
   - Handling errors
   - Exceptions
+  - Attributes
 
 ### Notes:
 
