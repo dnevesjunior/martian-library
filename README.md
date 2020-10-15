@@ -51,6 +51,7 @@
   - DRY on queries
   - Fragments
   - Handling errors
+  - Exceptions
 
 ### Notes:
 

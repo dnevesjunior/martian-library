@@ -23,7 +23,7 @@ const UserInfo = () => {
                   });
                 }}
               >
-                {( signIn, { loading: authenticating }) =>
+                {( signIn, { loading: authenticating, error }) =>
                   authenticating ? (
                     '...'
                   ) : (
@@ -40,6 +40,7 @@ const UserInfo = () => {
                       }}>
                         <input ref={input} type='email' className={cs.input} placeholder='Your Email' />
                         <input type='submit' className={cs.button} value='Sign In' />
+                        {error && <span>{error.message}</span>}
                       </form>
                     </div>
                   )
