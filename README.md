@@ -49,6 +49,7 @@
 
 - Refactoring
   - DRY on queries
+  - Fragments
 
 ### Notes:
 
@@ -61,6 +62,8 @@
     - This is connected to the backend through the http link configured on app/javascript/utils/apollo.js
 
 - queries are defined in operations.graphql
+
+- GraphQL has its own "variables" called [fragment](https://graphql.github.io/graphql-spec/draft/#sec-Language.Fragments). A fragment is a named set of fields on a specific type.
 
 ### Tips:
 
