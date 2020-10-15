@@ -1,4 +1,5 @@
 .form {
+  position: relative;
   display: grid;
   margin: 0 auto 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -8,6 +9,12 @@
   width: 100%;
   max-width: 840px;
   align-items: start;
+}
+
+.errors {
+  position: absolute;
+  top: -20px;
+  color: #FF5845;
 }
 
 .input {

@@ -50,6 +50,7 @@
 - Refactoring
   - DRY on queries
   - Fragments
+  - Handling errors
 
 ### Notes:
 
