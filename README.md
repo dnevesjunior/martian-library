@@ -54,6 +54,7 @@
   - Exceptions
   - Attributes
   - Real-time updates (Action Cable)
+  - Apollo subscriptions connection
 
 ### Notes:
 
