@@ -53,6 +53,7 @@
   - Handling errors
   - Exceptions
   - Attributes
+  - Real-time updates (Action Cable)
 
 ### Notes:
 
