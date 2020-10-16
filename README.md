@@ -47,6 +47,17 @@
 
 - Add Optimistic Update
 
+- Refactoring
+  - DRY on queries
+  - Fragments
+  - Handling errors
+  - Exceptions
+  - Attributes
+  - Real-time updates (Action Cable)
+  - Apollo subscriptions connection
+
+- Subscription Component
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
@@ -58,6 +69,8 @@
     - This is connected to the backend through the http link configured on app/javascript/utils/apollo.js
 
 - queries are defined in operations.graphql
+
+- GraphQL has its own "variables" called [fragment](https://graphql.github.io/graphql-spec/draft/#sec-Language.Fragments). A fragment is a named set of fields on a specific type.
 
 ### Tips:
 
@@ -82,3 +95,6 @@
 
 - Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered
   - Probable issue in ruby 2.7 with bundler gemspec. Run `gem update --system 3.0.8 && gem update --system`. Ref: https://github.com/rubygems/rubygems/issues/3551
+
+- Cannot find module: 'graphql-ruby-client/subscriptions/ActionCableLink'
+  - On 1.7.3, the `graphql-ruby-client` library moved its imports to root. Import as `import { ActionCableLink } from 'graphql-ruby-client';`

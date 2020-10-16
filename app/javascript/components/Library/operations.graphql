@@ -1,8 +1,8 @@
+#import '../../fragments/Item.graphql'
+
 query LibraryQuery {
   items {
-    id
-    title
-    imageUrl
+    ...ItemFragment
     description
     user {
       id
