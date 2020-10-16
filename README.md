@@ -56,6 +56,8 @@
   - Real-time updates (Action Cable)
   - Apollo subscriptions connection
 
+- Subscription Component
+
 ### Notes:
 
 > GraphQL is transport-agnostic, but most implementations, including ruby-graphql, use HTTP POST requests. Requests are sent to GraphqlController#execute.
