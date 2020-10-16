@@ -93,3 +93,6 @@
 
 - Trying to register Bundler::GemfileError for status code 4 but Bundler::GemfileError is already registered
   - Probable issue in ruby 2.7 with bundler gemspec. Run `gem update --system 3.0.8 && gem update --system`. Ref: https://github.com/rubygems/rubygems/issues/3551
+
+- Cannot find module: 'graphql-ruby-client/subscriptions/ActionCableLink'
+  - On 1.7.3, the `graphql-ruby-client` library moved its imports to root. Import as `import { ActionCableLink } from 'graphql-ruby-client';`

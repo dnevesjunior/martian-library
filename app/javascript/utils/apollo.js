@@ -9,7 +9,7 @@ import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { ApolloLink, Observable } from 'apollo-link';
 import ActionCable from 'actioncable';
-import ActionCableLink from 'graphql-ruby-client/subscriptions/ActionCableLink';
+import { ActionCableLink } from 'graphql-ruby-client';
 
 // create cache (read details on utils Readme)
 export const createCache = () => {
@@ -87,7 +87,7 @@ const getCableUrl = () => {
   const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
   const host = window.location.hostname;
   const port = process.env.CABLE_PORT || '3000';
-  const autoToken = localStorage.getItem('mlToken');
+  const authToken = localStorage.getItem('mlToken');
   return `${protocol}//${host}:${port}/cable?token=${authToken}`;
 }
 
